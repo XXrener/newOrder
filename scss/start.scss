@@ -1,0 +1,83 @@
+@charset "utf-8";
+.start_content{
+
+    .start_header{
+        background-color: #000;
+        color: #fff;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        margin: 5rem auto 0rem auto;
+        width: 10rem;
+        border-radius: .5rem;
+    
+
+        img{
+            height: 2.2rem;
+            line-height: 2.2rem;
+            position: relative;
+            top:.5rem;
+            // left: 1rem; 不用left是为了可以用外边框把字体挤过去
+            margin-left: 1.5rem;
+            padding-right: 0.3rem;
+        }
+    }
+
+    .notice{
+        color: red ;
+        text-align: center;
+        margin: 1rem 0rem;
+    }
+
+    // 人数flex布局
+    .use_list{
+
+        display: flex;
+        flex-wrap: wrap;
+     
+        li{
+            width: 25%;
+            box-sizing: border-box;
+            padding: .5rem;
+
+            span{
+                display: block;
+                height: 3rem;
+                width: 100%;
+                text-align: center;
+                line-height: 3rem;
+                background-color: #fff;
+                border-radius: .5rem;
+            }
+        }
+    }
+
+    .start{
+        position: fixed;
+        bottom: 10rem;
+        left: 50%;
+        margin-left: -3rem;
+
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        // background-color:red;
+
+        background-image: radial-gradient(#f72323, #be0303, #f33737);//径向渐变
+        box-shadow: 0.1rem 0.1rem 1rem #515151;
+
+        span{   //行内元素
+            display: block; //更改成块元素 可设置宽高
+            width: 2rem;
+            // margin: 0 auto;
+            
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+           
+            color: #fff;
+            box-sizing: border-box;
+            // padding: 0.2rem;
+            // letter-spacing: 0.1rem;
+        }
+    }
+}

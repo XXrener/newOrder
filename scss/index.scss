@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+.index_header{
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    height: 2rem;
+  
+    nav{
+        // height: 4rem;
+        ul{
+            display: flex;
+            height: 2rem;
+            li{
+                
+                flex: 1;
+                text-align: center;
+                border-right: 1px solid #f1f1f1;
+
+                &:last-child{
+                    border-right: none;
+                }
+                img{
+                    
+                    width: 1rem;
+                    height: 1rem;
+                    margin: 0 auto;
+                    margin-top: 0.2rem;
+                }
+
+                p{
+                    margin-top: -0.2rem;
+                    font-size: 14px;
+                }
+                
+            }
+        }
+    }
+}
+/*侧边栏 使用绝对与相对定位*/
+
+/*
+.left_cate{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 6rem;
+    height: 100%;
+    background: #eee;
+
+    ul{
+        position: relative;
+        padding: .5rem;
+        background: #eee;
+        z-index: 2;
+
+        li{
+            // padding: .5rem;
+            line-height: 4rem;
+
+            &:first-child{
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    .nav_cate{
+
+        position: absolute;
+        left: 5.5rem;
+        top: 45%;
+
+        z-index: 1;
+
+        width: 4rem;
+        height: 4rem;
+        background:#8b878782;
+
+        border-radius: 0rem 50% 50% 0rem;
+        text-align: center;
+
+        img{
+            margin-top: 0.2rem;
+            width: 2rem;
+            height: 1.8rem;
+        }
+
+        p{
+            margin-top: -0.2rem;
+            color: #fff;
+        }
+
+        
+    }
+
+}
+*/
+
+/*使用固定定位 相对于浏览窗口*/
+.left_cate{
+    /*css3 动画效果默认*/
+    transition: all 1s;
+    transform:translate(-100%,0);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #eee;
+
+    width: 3rem;
+    height: 100%;
+
+    z-index: 2;
+
+    ul{
+        box-sizing: border-box;
+        padding: .2rem;
+        width: 100%;
+        height:100%;
+        background: #eee;
+
+        position: absolute;
+        z-index: 3;
+        li{
+            line-height: 2rem;
+            // font-size: 14px;
+            font-size: 18px;
+        }
+    }
+
+    /*菜单按钮*/
+    .nav_cate{
+
+        position: absolute;
+        left: 2.9rem;
+        top: 39%;
+
+        z-index: 2;
+
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #99999990;
+
+        border-radius: 0rem 50% 50% 0rem;
+        text-align: center;
+
+        
+        img{
+            position: relative;
+            width: 0.8rem;
+            height: .7rem;
+            margin-left:-.25rem ;
+            // margin-top: 0.2rem;
+        }
+
+        p{
+            position: relative;
+            color: #ffffff99;
+            // font-size: 14px;
+            font-size: .5rem;
+            // line-height: 1rem;
+            margin-top: -.15rem;
+            margin-left:-.25rem ;
+        }
+        &::before{
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+    }
+}
+/*菜单按钮蒙版*/
+/*
+    关于整个蒙版与菜单按钮和侧边分类的层级关系 在HTML结构中 蒙版masking与侧边left_cate整个板块同层 
+    通过设置模块层级关系 调整对屏幕显示的层级
+    对蒙版设置为 1 让其处于最低层
+    对整个侧边设置为2  让整个侧边里面的层级高于蒙版
+    对ul设置为3 让其高于 菜单按钮 这样就实现按钮半遮盖效果
+    对按钮设置为 2  与最外层的left_cate侧边同级同时低于ul 高于蒙版 这样就能实现点击效果
+*/
+.masking{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: #99999940;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    display: none;
+}
+
+// 内容区
+.content{
+    // margin: 0 auto;
+
+    .item{
+
+        h3{
+            text-align: center;
+            padding: .1rem;
+            letter-spacing: 0.25rem;
+        }
+        /*列表*/
+        .item_list{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 .1rem;
+
+            li{
+                width: 33.3%;
+                // text-align: center;
+                padding: .1rem;  
+                box-sizing: border-box;
+               
+                
+                .inner{
+                    
+                    width: 100%;
+                    overflow: hidden;
+                    border-radius: 0.5rem;
+                    background: #fff;
+
+                    img{
+                        width: 100%;
+                        // height: 100%;
+                        height: 3rem;
+                    }
+
+                    p{
+                        padding: .1rem .1rem;
+                    }
+
+                    .title{
+                        text-align: center;
+                        font-weight: bold;
+                        letter-spacing: .05rem;
+                        font-size: 16px;
+                    }
+                    
+                    .price{
+                        font-weight: bold;
+                        font-size: 14px;
+                        span{
+                            font-weight: bold;
+                            font-size: .6rem;
+                            color: rgb(245, 92, 3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

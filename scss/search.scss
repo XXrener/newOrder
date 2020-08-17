@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+.search_header{
+
+    width: 100%;
+    height: 1.5rem;
+    // background: #bababa;
+    background-image: -webkit-linear-gradient(top,#e9e9e9, #bababa, #a9a9a9);/*chorome 和 ie Edge浏览器*/
+    background-image: linear-gradient(top,#e9e9e9, #bababa, #a9a9a9);
+
+    line-height: 1.5rem;
+
+    .title{
+
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        .search{
+            
+            
+            font-size: .75rem;
+            line-height: .75rem;
+            height: .75rem;
+            width: 80%;
+
+            border-radius: .25rem;
+            border: none;
+        }
+    }
+    
+}
+
+.search_content{
+
+    .item_list{
+
+        background: rgb(255, 255, 255);
+        padding: 0.15rem 0rem 0.15rem 0rem;
+
+        li{
+
+            display: flex;
+            padding: 0.15rem 0rem 0.15rem .5rem;
+            border-bottom: solid 1px #999;
+
+            img{
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+
+            .inner{
+                flex: 1;
+                margin-left: .5rem;
+
+                .title{
+                    font-size: .5rem;
+                    line-height: .8rem;
+                }
+
+                .price{
+
+                    font-size: .4rem;
+                    line-height: .6rem;
+                    color: red;
+                }
+
+                span{
+                    font-size: .4rem;
+                    line-height: .5rem;
+                }
+            }
+        }
+
+    }
+}

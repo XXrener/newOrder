@@ -1,0 +1,74 @@
+.start_content .start_header {
+  background-color: #000;
+  color: #fff;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  margin: 5rem auto 0rem auto;
+  width: 10rem;
+  border-radius: .5rem;
+}
+
+.start_content .start_header img {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  position: relative;
+  top: .5rem;
+  margin-left: 1.5rem;
+  padding-right: 0.3rem;
+}
+
+.start_content .notice {
+  color: red;
+  text-align: center;
+  margin: 1rem 0rem;
+}
+
+.start_content .use_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.start_content .use_list li {
+  width: 25%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: .5rem;
+}
+
+.start_content .use_list li span {
+  display: block;
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  line-height: 3rem;
+  background-color: #fff;
+  border-radius: .5rem;
+}
+
+.start_content .start {
+  position: fixed;
+  bottom: 10rem;
+  left: 50%;
+  margin-left: -3rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-image: radial-gradient(#f72323, #be0303, #f33737);
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem #515151;
+          box-shadow: 0.1rem 0.1rem 1rem #515151;
+}
+
+.start_content .start span {
+  display: block;
+  width: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=start.css.map */

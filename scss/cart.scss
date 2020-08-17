@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+.cart_content{
+
+    margin: .25rem;
+    .cart_info{
+        background: #fff;
+        padding: .15rem 5% .15rem 5%;
+        border-radius: .4rem;
+        // margin: 0 auto;
+        h2{
+            text-align: center;
+            line-height: 1.2rem;
+            display: inline-block;
+            width: 100%;
+            height: 1.2rem;
+            border-bottom: 1px #e2e2e2 solid;
+        }
+
+        .p_number{
+            display: flex;
+            // justify-content: space-between;
+            padding: .4rem;
+            
+            border-bottom: 1px #e2e2e2 solid;
+            .p_number_left{
+                flex: 1;
+
+                p{
+                    
+                    line-height: .8rem;
+
+                    &:first-child{
+                        color:#ff0000;
+                    }
+                }
+            }
+            .p_number_right{
+                // flex: 1;
+                img{
+                    width: 1rem;
+                    height: 1rem;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+        }
+
+        .cart_num{
+            padding: .4rem;
+            border-bottom: 1px #e2e2e2 solid;
+
+            p{
+                line-height: .8rem;
+                span{
+                    font-size: .6rem;
+                    color: #ff0000;
+                }
+                &:first-child{
+                    color: #133b88;
+                    span{
+                        display: inline-block;
+                        padding: 0.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /*美食推荐*/
+    .cart_list{
+
+        margin-top: .25rem;
+        background: #fff;
+        padding: .15rem 5% .15rem 5%;
+        border-radius: .4rem;
+        h2{
+            // background: #fff;
+            // padding: .15rem 5% .15rem 5%;
+            // border-radius: .4rem;
+            line-height: 1rem;
+            border-bottom: 1px solid #e2e2e2;
+        }
+        ul{
+
+            // background: #fff;
+            // padding: .15rem 5% .15rem 5%;
+            // border-radius: .4rem;
+
+            .item{
+                display: flex;
+                padding: .25rem 0rem .25rem 0;
+                border-bottom: 1px solid #e2e2e2;
+                .left_food{
+                    
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    img{
+                        
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                    .food_info{
+                        flex: 1;
+                        padding-left: .5rem;
+
+                        p{
+                            line-height: .65rem;
+                        }
+                    }
+                }
+                /*加减按键*/
+                .right_cart{
+                    flex: 1;
+
+                    .cart_num{
+                        display: flex;
+                        // justify-content: space-between;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                        width: 3.5rem;
+                        height: 100%;
+                        text-align: center;
+                        // background: #133b88;
+                        color: #ff0000;
+                        .input_left{
+                            width: 1rem;
+                            height: 1rem;
+                            font-size: 1.4rem;
+                            line-height: .8rem;
+
+                            border: 1px solid #e2e2e2;
+                            
+                        }
+                        .input_center{
+                            width: 1rem;
+                            border-top: 1px solid #e2e2e2;
+                            border-bottom: 1px solid #e2e2e2;
+                            input{
+                                padding: 0;
+                                margin: 0;
+                                width: 1rem;
+                                height: 1rem;
+                                text-align: center;
+                                font-size: .6rem;
+                                border: none;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                        }
+                        .input_right{
+                            width: 1rem;
+                            height: 1rem;
+
+                            font-size: 1rem;
+                            line-height: .8rem;
+
+                            border: 1px solid #e2e2e2;
+                            // background: #999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*最常推荐美食*/
+
+.hot_good{
+
+    
+
+    margin: .25rem;
+    background: #fff;
+    padding: .15rem 5% .15rem 5%;
+    border-radius: .4rem;
+    h2{
+            // background: #fff;
+            // padding: .15rem 5% .15rem 5%;
+            // border-radius: .4rem;
+        line-height: 1rem;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .item_list_outer{
+        width: 100%;
+        height: 100%;
+        // display: flex;
+        // flex-direction: column-reverse;
+        
+        .item_list{
+            width: 100%;
+            height: 100%;
+            ul{         /*固定可视化窗口*/
+                display: flex;
+                flex-wrap: nowrap;
+                padding: 0 .1rem;
+                width: 100%;
+                height: 100%;
+                border: 1px #000 solid;
+                overflow-x: auto;
+                box-sizing: border-box;
+
+                li{
+                    width: 33.3%;
+                    // text-align: center;
+                    padding: .1rem;  
+                    box-sizing: border-box;
+                
+                    
+                    .inner{
+                        
+                        width: 100%;
+                        overflow: hidden;
+                        border-radius: 0.5rem;
+                        background: #fff;
+
+                        img{
+                            // width: 100%;
+                            // height: 100%;
+                            width: 3rem;
+                            height: 3rem;
+                        }
+
+                        p{
+                            padding: .1rem .1rem;
+                        }
+
+                        .title{
+                            text-align: center;
+                            font-weight: bold;
+                            letter-spacing: .05rem;
+                            font-size: 16px;
+                        }
+                        
+                        .price{
+                            font-weight: bold;
+                            font-size: 14px;
+                            span{
+                                font-weight: bold;
+                                font-size: .6rem;
+                                color: rgb(245, 92, 3);
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        // &::before{
+        //     content: "";
+        //     display: block;
+        //     // width: 100%;
+        //     height: 1.5rem;
+        //     // background: #000;
+        // }
+    }
+    
+}
